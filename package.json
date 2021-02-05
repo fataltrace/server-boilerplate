@@ -1,0 +1,39 @@
+{
+  "name": "server-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node -r dotenv/config ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint ./src",
+    "lint:fix": "npx eslint --fix ./src",
+    "db:fake": "mongo --nodb --quiet --eval \"const url = 'localhost:27017/db'\" ./db/fake.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fataltrace/server-boilerplate.git"
+  },
+  "author": "LeX?!",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fataltrace/server-boilerplate/issues"
+  },
+  "homepage": "https://github.com/fataltrace/server-boilerplate#readme",
+  "dependencies": {
+    "@graphql-tools/merge": "^6.2.5",
+    "apollo-server-koa": "^2.18.0",
+    "bcrypt": "^5.0.0",
+    "graphql": "^15.4.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-jwt": "^4.0.0",
+    "koa-router": "^9.4.0",
+    "mongoose": "^5.10.6"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^7.13.0"
+  }
+}
